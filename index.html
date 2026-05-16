@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>СПІРІДОНОВ АНДРІЙВИКОНАНЕ| ТЕСТОВЕ ЗАВДАННЯ</title>
+    <title>СПІРІДОНОВ АНДРІЙ | ТЕСТОВЕ ЗАВДАННЯ</title>
     <style>
       body {
         background-color: #0d0e12;
@@ -84,6 +84,7 @@
       }
 
       .visual-content {
+        position: relative;
         display: flex;
         justify-content: center;
         border-radius: 16px;
@@ -93,6 +94,7 @@
         width: 100%;
         border: 1px solid #333;
         background: #000;
+        cursor: pointer;
       }
 
       .video-spacer {
@@ -110,6 +112,55 @@
         display: block;
         pointer-events: none;
         -webkit-user-drag: none;
+      }
+
+      .play-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.2s ease, visibility 0.2s ease;
+        z-index: 2;
+      }
+
+      .visual-content.paused .play-overlay {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .play-button-icon {
+        width: 60px;
+        height: 60px;
+        background: rgba(124, 77, 255, 0.95);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+        transition: transform 0.2s ease, background-color 0.2s ease;
+      }
+
+      .visual-content:hover .play-button-icon {
+        transform: scale(1.1);
+        background: rgba(124, 77, 255, 1);
+      }
+
+      .play-button-icon::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        border-top: 12px solid transparent;
+        border-bottom: 12px solid transparent;
+        border-left: 20px solid #ffffff;
+        margin-left: 6px;
       }
 
       ul {
@@ -162,18 +213,24 @@
         </div>
 
         <div class="variant-title">Варіант 1 (Розширений)</div>
-        <div class="visual-content">
-          <video autoplay loop muted playsinline disablePictureInPicture>
+        <div class="visual-content video-container">
+          <video autoplay muted playsinline disablePictureInPicture>
             <source src="XSPRJ anner4.mp4" type="video/mp4" />
           </video>
+          <div class="play-overlay">
+            <div class="play-button-icon"></div>
+          </div>
         </div>
 
         <div class="video-spacer">
           <div class="variant-title">Варіант 2 (Скорочений)</div>
-          <div class="visual-content">
-            <video autoplay loop muted playsinline disablePictureInPicture>
+          <div class="visual-content video-container">
+            <video autoplay muted playsinline disablePictureInPicture>
               <source src="banner4.mp4" type="video/mp4" />
             </video>
+            <div class="play-overlay">
+              <div class="play-button-icon"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -240,6 +297,33 @@
           return false;
         }
       };
+
+      document.querySelectorAll(".video-container").forEach((container) => {
+        const video = container.querySelector("video");
+
+        // Залишаємо запас у 0.8 секунди — відео стопнеться чітко на кадрі з синіми дверима та жовтою кнопкою
+        video.addEventListener("timeupdate", () => {
+          if (video.duration && video.currentTime >= video.duration - 0.8) {
+            video.pause();
+            video.currentTime = video.duration - 0.8;
+            container.classList.add("paused");
+          }
+        });
+
+        container.addEventListener("click", () => {
+          if (video.paused) {
+            // Перезапуск з нуля, якщо ми дійшли до нашої кастомної межі паузи
+            if (video.currentTime >= video.duration - 0.85) {
+              video.currentTime = 0;
+            }
+            video.play();
+            container.classList.remove("paused");
+          } else {
+            video.pause();
+            container.classList.add("paused");
+          }
+        });
+      });
     </script>
   </body>
 </html>
