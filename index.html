@@ -1,227 +1,245 @@
 <!DOCTYPE html>
 <html lang="uk">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>СПІРІДОНОВ АНДРІЙВИКОНАНЕ| ТЕСТОВЕ ЗАВДАННЯ</title>
     <style>
-        body {
-            background-color: #0d0e12;
-            color: #ffffff;
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
+      body {
+        background-color: #0d0e12;
+        color: #ffffff;
+        font-family: "Inter", sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
 
-        .main-header {
-            text-align: center;
-            padding: 50px 20px;
-            background: linear-gradient(180deg, #1a1c24 0%, #0d0e12 100%);
-            width: 100%;
-            border-bottom: 1px solid #2d2f36;
-        }
+      .main-header {
+        text-align: center;
+        padding: 50px 20px;
+        background: linear-gradient(180deg, #1a1c24 0%, #0d0e12 100%);
+        width: 100%;
+        border-bottom: 1px solid #2d2f36;
+      }
 
-        .main-header h1 {
-            font-size: 22px;
-            letter-spacing: 2px;
-            color: #7c4dff;
-            margin: 0;
-            text-transform: uppercase;
-        }
+      .main-header h1 {
+        font-size: 22px;
+        letter-spacing: 2px;
+        color: #7c4dff;
+        margin: 0;
+        text-transform: uppercase;
+      }
 
-        .container {
-            max-width: 800px;
-            width: 90%;
-            padding: 30px 0;
-        }
+      .container {
+        max-width: 800px;
+        width: 90%;
+        padding: 30px 0;
+      }
 
-        .case-block {
-            margin-bottom: 60px;
-            background: #16181d;
-            border-radius: 24px;
-            padding: 25px;
-            border: 1px solid #2d2f36;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+      .case-block {
+        margin-bottom: 60px;
+        background: #16181d;
+        border-radius: 24px;
+        padding: 25px;
+        border: 1px solid #2d2f36;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
 
-        .task-description {
-            background: #1f2229;
-            padding: 20px;
-            border-radius: 12px;
-            margin-bottom: 25px;
-            font-size: 14px;
-            line-height: 1.5;
-            color: #b0b3b8;
-            border-left: 4px solid #7c4dff;
-            width: 100%;
-            box-sizing: border-box;
-        }
+      .task-description {
+        background: #1f2229;
+        padding: 20px;
+        border-radius: 12px;
+        margin-bottom: 25px;
+        font-size: 14px;
+        line-height: 1.5;
+        color: #b0b3b8;
+        border-left: 4px solid #7c4dff;
+        width: 100%;
+        box-sizing: border-box;
+      }
 
-        .task-description h3 {
-            margin-top: 0;
-            color: #fff;
-            text-transform: uppercase;
-            font-size: 15px;
-            margin-bottom: 10px;
-        }
+      .task-description h3 {
+        margin-top: 0;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 15px;
+        margin-bottom: 10px;
+      }
 
-        .variant-title {
-            color: #7c4dff;
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 15px;
-            font-weight: bold;
-        }
+      .variant-title {
+        color: #7c4dff;
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+        font-weight: bold;
+      }
 
-        .visual-content {
-            display: flex;
-            justify-content: center;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.5);
-            max-width: 360px; 
-            width: 100%;
-            border: 1px solid #333;
-            background: #000;
-        }
+      .visual-content {
+        display: flex;
+        justify-content: center;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+        max-width: 360px;
+        width: 100%;
+        border: 1px solid #333;
+        background: #000;
+      }
 
-        .video-spacer {
-            margin-top: 30px;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+      .video-spacer {
+        margin-top: 30px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
 
-        img, video {
-            width: 100%;
-            height: auto;
-            display: block;
-            pointer-events: none;
-            -webkit-user-drag: none;
-        }
+      img,
+      video {
+        width: 100%;
+        height: auto;
+        display: block;
+        pointer-events: none;
+        -webkit-user-drag: none;
+      }
 
-        ul {
-            padding-left: 18px;
-            margin: 8px 0;
-        }
+      ul {
+        padding-left: 18px;
+        margin: 8px 0;
+      }
 
-        .cta-text {
-            color: #7c4dff;
-            font-weight: bold;
-            margin-top: 8px;
-            display: block;
-        }
+      .cta-text {
+        color: #7c4dff;
+        font-weight: bold;
+        margin-top: 8px;
+        display: block;
+      }
 
-        footer {
-            padding: 30px;
-            color: #4a4d55;
-            font-size: 11px;
-            text-align: center;
-        }
+      footer {
+        padding: 30px;
+        color: #4a4d55;
+        font-size: 11px;
+        text-align: center;
+      }
     </style>
-</head>
-<body oncontextmenu="return false;">
-
+  </head>
+  <body oncontextmenu="return false;">
     <div class="main-header">
-        <h1>СПІРІДОНОВ АНДРІЙ</h1>
-        <p style="margin-top: 8px; color: #888; font-size: 14px; letter-spacing: 1px;">ВИКОНАНЕ ТЕСТОВЕ ЗАВДАННЯ</p>
+      <h1>СПІРІДОНОВ АНДРІЙ</h1>
+      <p
+        style="
+          margin-top: 8px;
+          color: #888;
+          font-size: 14px;
+          letter-spacing: 1px;
+        "
+      >
+        ВИКОНАНЕ ТЕСТОВЕ ЗАВДАННЯ
+      </p>
     </div>
 
     <div class="container">
-
-        <div class="case-block">
-            <div class="task-description">
-                <h3>Креатив 4 – Відео (Логістика)</h3>
-                <p><strong>Хук:</strong> Логістика — це коли кожна деталь має значення.</p>
-                <p><strong>Рішення:</strong> Надійні перевезення від дверей до дверей. Контроль та прозорі умови.</p>
-                <span class="cta-text">CTA: Довірте доставку професіоналам.</span>
-            </div>
-
-            <div class="variant-title">Варіант 1 (Стандартний)</div>
-            <div class="visual-content">
-                <video autoplay loop muted playsinline disablePictureInPicture>
-                    <source src="banner4.mp4" type="video/mp4">
-                </video>
-            </div>
-
-            <div class="video-spacer">
-                <div class="variant-title">Варіант 2 (Розширений)</div>
-                <div class="visual-content">
-                    <video autoplay loop muted playsinline disablePictureInPicture>
-                        <source src="XSPRJ anner4.mp4" type="video/mp4">
-                    </video>
-                </div>
-            </div>
+      <div class="case-block">
+        <div class="task-description">
+          <h3>Креатив 4 – Відео (Логістика)</h3>
+          <p>
+            <strong>Хук:</strong> Логістика — це коли кожна деталь має значення.
+          </p>
+          <p>
+            <strong>Рішення:</strong> Надійні перевезення від дверей до дверей.
+            Контроль та прозорі умови.
+          </p>
+          <span class="cta-text">CTA: Довірте доставку професіоналам.</span>
         </div>
 
-        <div class="case-block">
-            <div class="task-description">
-                <h3>Баннер 3 (Сонячні станції)</h3>
-                <p>Станція 20 кВт «під ключ» — за 8 273 ₴ на місяць</p>
-                <ul>
-                    <li>Економія на сплаті електроенергії</li>
-                    <li>Додатковий дохід на пасиві</li>
-                </ul>
-                <span class="cta-text">CTA: Встигни встановити — плати частинами</span>
-            </div>
-            <div class="visual-content">
-                <img src="banner3.jpg" alt="Solar Banner">
-            </div>
+        <div class="variant-title">Варіант 1 (Розширений)</div>
+        <div class="visual-content">
+          <video autoplay loop muted playsinline disablePictureInPicture>
+            <source src="XSPRJ anner4.mp4" type="video/mp4" />
+          </video>
         </div>
 
-        <div class="case-block">
-            <div class="task-description">
-                <h3>Банер 2 (Нерухомість)</h3>
-                <p>Інвестиційні апартаменти у серці Львівських Карпат</p>
-                <ul>
-                    <li>від 86 000$</li>
-                    <li>перший внесок від 30%</li>
-                </ul>
-                <span class="cta-text">CTA: Дізнатись деталі</span>
-            </div>
-            <div class="visual-content">
-                <img src="BANNER2.png" alt="Real Estate Banner">
-            </div>
+        <div class="video-spacer">
+          <div class="variant-title">Варіант 2 (Скорочений)</div>
+          <div class="visual-content">
+            <video autoplay loop muted playsinline disablePictureInPicture>
+              <source src="banner4.mp4" type="video/mp4" />
+            </video>
+          </div>
         </div>
+      </div>
 
-        <div class="case-block">
-            <div class="task-description">
-                <h3>Банер 1 (Комплексні обіди)</h3>
-                <p>Смачні обіди для компаній (100–300 осіб).</p>
-                <ul>
-                    <li>Від 165 грн на обід</li>
-                    <li>Київ, Харків, Одеса, Львів, Запоріжжя</li>
-                </ul>
-                <span class="cta-text">CTA: Залиште заявку</span>
-            </div>
-            <div class="visual-content">
-                <img src="BANNER1.png" alt="Catering Banner">
-            </div>
+      <div class="case-block">
+        <div class="task-description">
+          <h3>Баннер 3 (Сонячні станції)</h3>
+          <p>Станція 20 кВт «під ключ» — за 8 273 ₴ на місяць</p>
+          <ul>
+            <li>Економія на сплаті електроенергії</li>
+            <li>Додатковий дохід на пасиві</li>
+          </ul>
+          <span class="cta-text"
+            >CTA: Встигни встановити — плати частинами</span
+          >
         </div>
+        <div class="visual-content">
+          <img src="banner3.jpg" alt="Solar Banner" />
+        </div>
+      </div>
 
+      <div class="case-block">
+        <div class="task-description">
+          <h3>Банер 2 (Нерухомість)</h3>
+          <p>Інвестиційні апартаменти у серці Львівських Карпат</p>
+          <ul>
+            <li>від 86 000$</li>
+            <li>перший внесок від 30%</li>
+          </ul>
+          <span class="cta-text">CTA: Дізнатись деталі</span>
+        </div>
+        <div class="visual-content">
+          <img src="BANNER2.png" alt="Real Estate Banner" />
+        </div>
+      </div>
+
+      <div class="case-block">
+        <div class="task-description">
+          <h3>Банер 1 (Комплексні обіди)</h3>
+          <p>Смачні обіди для компаній (100–300 осіб).</p>
+          <ul>
+            <li>Від 165 грн на обід</li>
+            <li>Київ, Харків, Одеса, Львів, Запоріжжя</li>
+          </ul>
+          <span class="cta-text">CTA: Залиште заявку</span>
+        </div>
+        <div class="visual-content">
+          <img src="BANNER1.png" alt="Catering Banner" />
+        </div>
+      </div>
     </div>
 
-    <footer>
-        &copy; 2026 Андрій Спірідонов. Всі права захищені.
-    </footer>
+    <footer>&copy; 2026 Андрій Спірідонов. Всі права захищені.</footer>
 
     <script>
-        document.onkeydown = function(e) {
-            if (e.ctrlKey && (e.keyCode === 83 || e.keyCode === 85 || e.keyCode === 123 || e.keyCode === 73)) {
-                return false;
-            }
-        };
+      document.onkeydown = function (e) {
+        if (
+          e.ctrlKey &&
+          (e.keyCode === 83 ||
+            e.keyCode === 85 ||
+            e.keyCode === 123 ||
+            e.keyCode === 73)
+        ) {
+          return false;
+        }
+      };
     </script>
-</body>
+  </body>
 </html>
