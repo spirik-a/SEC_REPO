@@ -53,27 +53,6 @@
         align-items: center;
       }
 
-      .task-description {
-        background: #1f2229;
-        padding: 20px;
-        border-radius: 12px;
-        margin-bottom: 25px;
-        font-size: 14px;
-        line-height: 1.5;
-        color: #b0b3b8;
-        border-left: 4px solid #7c4dff;
-        width: 100%;
-        box-sizing: border-box;
-      }
-
-      .task-description h3 {
-        margin-top: 0;
-        color: #fff;
-        text-transform: uppercase;
-        font-size: 15px;
-        margin-bottom: 10px;
-      }
-
       .variant-title {
         color: #7c4dff;
         font-size: 13px;
@@ -94,85 +73,21 @@
         width: 100%;
         border: 1px solid #333;
         background: #000;
-        cursor: pointer;
       }
 
-      .video-spacer {
-        margin-top: 30px;
+      img {
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        height: auto;
+        display: block;
+        -webkit-user-drag: none;
       }
 
-      img,
       video {
         width: 100%;
         height: auto;
         display: block;
-        pointer-events: none;
+        pointer-events: auto; /* Дозволяє клікати на кнопки плеєра */
         -webkit-user-drag: none;
-      }
-
-      .play-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.2s ease, visibility 0.2s ease;
-        z-index: 2;
-      }
-
-      .visual-content.paused .play-overlay {
-        opacity: 1;
-        visibility: visible;
-      }
-
-      .play-button-icon {
-        width: 60px;
-        height: 60px;
-        background: rgba(124, 77, 255, 0.95);
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
-        transition: transform 0.2s ease, background-color 0.2s ease;
-      }
-
-      .visual-content:hover .play-button-icon {
-        transform: scale(1.1);
-        background: rgba(124, 77, 255, 1);
-      }
-
-      .play-button-icon::after {
-        content: "";
-        display: block;
-        width: 0;
-        height: 0;
-        border-top: 12px solid transparent;
-        border-bottom: 12px solid transparent;
-        border-left: 20px solid #ffffff;
-        margin-left: 6px;
-      }
-
-      ul {
-        padding-left: 18px;
-        margin: 8px 0;
-      }
-
-      .cta-text {
-        color: #7c4dff;
-        font-weight: bold;
-        margin-top: 8px;
-        display: block;
       }
 
       footer {
@@ -200,85 +115,19 @@
 
     <div class="container">
       <div class="case-block">
-        <div class="task-description">
-          <h3>Креатив 4 – Відео (Логістика)</h3>
-          <p>
-            <strong>Хук:</strong> Логістика — це коли кожна деталь має значення.
-          </p>
-          <p>
-            <strong>Рішення:</strong> Надійні перевезення від дверей до дверей.
-            Контроль та прозорі умови.
-          </p>
-          <span class="cta-text">CTA: Довірте доставку професіоналам.</span>
-        </div>
+        <div class="variant-title">КЕРУВАННЯ ПЛЕЄРОМ ДОСТУПНЕ ВНИЗУ ВІДЕО</div>
+        <h6>ТАК ЯК ПЕРША СЦЕНА ЧОРНА, ЩОБ ПОБАЧИТИ НАТИСНІТЬ ПРОГРАВАТИ</h6>
 
-        <div class="variant-title">Варіант 1 (Розширений)</div>
         <div class="visual-content video-container">
-          <video autoplay muted playsinline disablePictureInPicture>
-            <source src="XSPRJ anner4.mp4" type="video/mp4" />
-          </video>
-          <div class="play-overlay">
-            <div class="play-button-icon"></div>
-          </div>
-        </div>
-
-        <div class="video-spacer">
-          <div class="variant-title">Варіант 2 (Скорочений)</div>
-          <div class="visual-content video-container">
-            <video autoplay muted playsinline disablePictureInPicture>
-              <source src="banner4.mp4" type="video/mp4" />
-            </video>
-            <div class="play-overlay">
-              <div class="play-button-icon"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="case-block">
-        <div class="task-description">
-          <h3>Баннер 3 (Сонячні станції)</h3>
-          <p>Станція 20 кВт «під ключ» — за 8 273 ₴ на місяць</p>
-          <ul>
-            <li>Економія на сплаті електроенергії</li>
-            <li>Додатковий дохід на пасиві</li>
-          </ul>
-          <span class="cta-text"
-            >CTA: Встигни встановити — плати частинами</span
+          <video
+            autoplay
+            playsinline
+            disablePictureInPicture
+            controls
+            controlsList="nodownload"
           >
-        </div>
-        <div class="visual-content">
-          <img src="banner3.jpg" alt="Solar Banner" />
-        </div>
-      </div>
-
-      <div class="case-block">
-        <div class="task-description">
-          <h3>Банер 2 (Нерухомість)</h3>
-          <p>Інвестиційні апартаменти у серці Львівських Карпат</p>
-          <ul>
-            <li>від 86 000$</li>
-            <li>перший внесок від 30%</li>
-          </ul>
-          <span class="cta-text">CTA: Дізнатись деталі</span>
-        </div>
-        <div class="visual-content">
-          <img src="BANNER2.png" alt="Real Estate Banner" />
-        </div>
-      </div>
-
-      <div class="case-block">
-        <div class="task-description">
-          <h3>Банер 1 (Комплексні обіди)</h3>
-          <p>Смачні обіди для компаній (100–300 осіб).</p>
-          <ul>
-            <li>Від 165 грн на обід</li>
-            <li>Київ, Харків, Одеса, Львів, Запоріжжя</li>
-          </ul>
-          <span class="cta-text">CTA: Залиште заявку</span>
-        </div>
-        <div class="visual-content">
-          <img src="BANNER1.png" alt="Catering Banner" />
+            <source src="1RD_TOON_STATION_TEST_TASK.mp4" type="video/mp4" />
+          </video>
         </div>
       </div>
     </div>
@@ -286,6 +135,7 @@
     <footer>&copy; 2026 Андрій Спірідонов. Всі права захищені.</footer>
 
     <script>
+      // Захист коду сторінки та блокування інспектора
       document.onkeydown = function (e) {
         if (
           e.ctrlKey &&
@@ -301,26 +151,18 @@
       document.querySelectorAll(".video-container").forEach((container) => {
         const video = container.querySelector("video");
 
-        // Залишаємо запас у 0.8 секунди — відео стопнеться чітко на кадрі з синіми дверима та жовтою кнопкою
+        // Зупинка відео за 0.8 сек до кінця на потрібному кадрі
         video.addEventListener("timeupdate", () => {
           if (video.duration && video.currentTime >= video.duration - 0.8) {
             video.pause();
             video.currentTime = video.duration - 0.8;
-            container.classList.add("paused");
           }
         });
 
-        container.addEventListener("click", () => {
-          if (video.paused) {
-            // Перезапуск з нуля, якщо ми дійшли до нашої кастомної межі паузи
-            if (video.currentTime >= video.duration - 0.85) {
-              video.currentTime = 0;
-            }
-            video.play();
-            container.classList.remove("paused");
-          } else {
-            video.pause();
-            container.classList.add("paused");
+        // Якщо відео додивилися до кінця і знову тиснуть плей — воно почнеться спочатку
+        video.addEventListener("play", () => {
+          if (video.currentTime >= video.duration - 0.85) {
+            video.currentTime = 0;
           }
         });
       });
