@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>СПІРІДОНОВ АНДРІЙ | ТЕСТОВЕ ЗАВДАННЯ</title>
+    <title>СПІРІДОНОВ АНДРІЙ</title>
     <style>
       body {
         background-color: #0d0e12;
@@ -36,14 +36,24 @@
         text-transform: uppercase;
       }
 
+      .task-title {
+        color: #8a8f9d;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        margin-top: 30px;
+        margin-bottom: 5px;
+      }
+
       .container {
         max-width: 800px;
         width: 90%;
-        padding: 30px 0;
+        padding: 15px 0 30px 0;
       }
 
       .case-block {
-        margin-bottom: 60px;
+        margin-bottom: 30px;
         background: #16181d;
         border-radius: 24px;
         padding: 25px;
@@ -51,6 +61,17 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+      }
+
+      .text-block-content {
+        width: 100%;
+        text-align: left;
+        line-height: 1.6;
+        color: #d1d1d1;
+      }
+
+      .text-block-content p {
+        margin-bottom: 15px;
       }
 
       .variant-title {
@@ -69,16 +90,22 @@
         border-radius: 16px;
         overflow: hidden;
         box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
-        max-width: 360px;
-        width: 100%;
+        max-width: 100%;
+        width: auto;
         border: 1px solid #333;
         background: #000;
       }
 
-      img {
+      .video-container {
+        max-width: 360px;
         width: 100%;
+      }
+
+      img {
+        max-width: 100%;
         height: auto;
         display: block;
+        object-fit: contain;
         -webkit-user-drag: none;
       }
 
@@ -86,8 +113,21 @@
         width: 100%;
         height: auto;
         display: block;
-        pointer-events: auto; /* Дозволяє клікати на кнопки плеєра */
+        pointer-events: auto;
         -webkit-user-drag: none;
+      }
+
+      .grid-2col {
+        display: flex;
+        gap: 20px;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .grid-2col .visual-content {
+        flex: 1 1 300px;
+        max-width: 360px;
       }
 
       footer {
@@ -101,23 +141,13 @@
   <body oncontextmenu="return false;">
     <div class="main-header">
       <h1>СПІРІДОНОВ АНДРІЙ</h1>
-      <p
-        style="
-          margin-top: 8px;
-          color: #888;
-          font-size: 14px;
-          letter-spacing: 1px;
-        "
-      >
-        ВИКОНАНЕ ТЕСТОВЕ ЗАВДАННЯ
-      </p>
     </div>
 
+    <!-- ЗАВДАННЯ 1 -->
+    <span class="task-title">ВИКОНАНЕ ЗАВДАННЯ 1</span>
     <div class="container">
       <div class="case-block">
         <div class="variant-title">КЕРУВАННЯ ПЛЕЄРОМ ДОСТУПНЕ ВНИЗУ ВІДЕО</div>
-        <h6>ТАК ЯК ПЕРША СЦЕНА ЧОРНА, ЩОБ ПОБАЧИТИ НАТИСНІТЬ ПРОГРАВАТИ</h6>
-
         <div class="visual-content video-container">
           <video
             autoplay
@@ -126,8 +156,101 @@
             controls
             controlsList="nodownload"
           >
-            <source src="1RD_TOON_STATION_TEST_TASK.mp4" type="video/mp4" />
+            <source
+              src="1TASK_SPANISHNIGHTTHANKStoHARRISON.mp4"
+              type="video/mp4"
+            />
           </video>
+        </div>
+      </div>
+    </div>
+
+    <!-- ЗАВДАННЯ 2 -->
+    <span class="task-title">ВИКОНАНЕ ЗАВДАННЯ 2</span>
+    <div class="container">
+      <div class="case-block">
+        <div class="variant-title">КЕРУВАННЯ ПЛЕЄРОМ ДОСТУПНЕ ВНИЗУ ВІДЕО</div>
+        <div class="visual-content video-container">
+          <video
+            autoplay
+            playsinline
+            disablePictureInPicture
+            controls
+            controlsList="nodownload"
+          >
+            <source
+              src="2TASK_ATMOSPHERETHANKStoHARRISON.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <!-- ЗАВДАННЯ 3 -->
+    <span class="task-title">ВИКОНАНЕ ЗАВДАННЯ 3</span>
+    <div class="container">
+      <div class="case-block">
+        <div class="variant-title">ПОРІВНЯННЯ ДО ТА ПІСЛЯ ОБРОБКИ</div>
+        <div class="visual-content">
+          <img
+            src="3_0TASK_COMPARE.jpg"
+            alt="Завдання 3 - Порівняння До й Після"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="variant-title">ОБРОБЛЕНІ ЗОБРАЖЕННЯ (КОКТЕЙЛЬ ТА ШНІЦЕЛЬ)</div>
+    <div class="grid-2col">
+      <div class="visual-content">
+        <img src="3_1COCTAIL.jpg" alt="Оброблений коктейль" />
+      </div>
+      <div class="visual-content">
+        <img src="3_2HNITZEL.jpg" alt="Оброблений шніцель" />
+      </div>
+    </div>
+    <!-- ЗАВДАННЯ 4 -->
+    <span class="task-title">ВИКОНАНЕ ЗАВДАННЯ 4</span>
+    <div class="container">
+      <div class="case-block">
+        <div class="variant-title">ПОСТЕР</div>
+        <div class="visual-content" style="margin-bottom: 25px">
+          <img
+            src="4THANKStoHARRIS4Task_ON_poster.png"
+            alt="Завдання 4 - Постер"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- АНАЛІЗ -->
+    <span class="task-title">АНАЛІЗ СТИЛІСТИКИ</span>
+    <div class="container">
+      <div class="case-block">
+        <div class="text-block-content">
+          <p><strong>Настрій ресторану та його вплив на монтаж:</strong></p>
+          <p>
+            Настрій закладу ThanksToHarrison — це перш за все затишна, але
+            водночас стильна й преміальна вечірня атмосфера. Це про тепло
+            естетичного світла, живу кухню, майстерність барменів та задоволення
+            від деталей.[cite: 1]
+          </p>
+          <p>Цей вайб безпосередньо визначив темп та ритм монтажу:[cite: 1]</p>
+          <p>
+            <strong>Перший ролик (Анонс):</strong> Ритм більш структурований.
+            Переходи та титри розміщені так, щоб глядач комфортно зчитував
+            ключову інформацію про дату й подію, але при цьому завдяки музичному
+            та відео супроводу відчував апетитний та гостинний настрій
+            заходу.[cite: 1]
+          </p>
+          <p>
+            <strong>Другий ролик (Атмосферний):</strong> Тут монтаж більш м'який
+            та плинний. Акцент зроблено на деталях — від сутінкового фасаду та
+            вогню на кухні до роботи барменів і подачі напоїв. Музика та плавні
+            переходи створюють відчуття занурення в естетику закладу, де
+            хочеться провести вечір.[cite: 1]
+          </p>
         </div>
       </div>
     </div>
@@ -135,7 +258,6 @@
     <footer>&copy; 2026 Андрій Спірідонов. Всі права захищені.</footer>
 
     <script>
-      // Захист коду сторінки та блокування інспектора
       document.onkeydown = function (e) {
         if (
           e.ctrlKey &&
@@ -147,19 +269,14 @@
           return false;
         }
       };
-
       document.querySelectorAll(".video-container").forEach((container) => {
         const video = container.querySelector("video");
-
-        // Зупинка відео за 0.8 сек до кінця на потрібному кадрі
         video.addEventListener("timeupdate", () => {
           if (video.duration && video.currentTime >= video.duration - 0.8) {
             video.pause();
             video.currentTime = video.duration - 0.8;
           }
         });
-
-        // Якщо відео додивилися до кінця і знову тиснуть плей — воно почнеться спочатку
         video.addEventListener("play", () => {
           if (video.currentTime >= video.duration - 0.85) {
             video.currentTime = 0;
